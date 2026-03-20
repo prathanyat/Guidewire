@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>GigGuard Dashboard</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* Left panel */
+.left {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Cards */
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Premium card */
+.premium {
+  background: linear-gradient(135deg, orange, #ff7a00);
+  color: white;
+}
+
+/* Main panel */
+.main {
+  width: 75%;
+}
+
+/* Alert box */
+.alert {
+  background: linear-gradient(135deg, #2b6cb0, #3182ce);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* Bottom section */
+.bottom {
+  display: flex;
+  gap: 20px;
+}
+
+/* Claims */
+.claim-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.paid {
+  color: orange;
+  font-weight: bold;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px;
+  width: 100%;
+  background: orange;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.analytics p {
+  margin: 8px 0;
+}
+
+.active {
+  color: green;
+  font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h2>GigGuard</h2>
+  <nav>
+    <a href="#">Dashboard</a>
+    <a href="#">Claims</a>
+    <a href="#">Settings</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <!-- Left Panel -->
+  <div class="left">
+    <div class="card premium">
+      <h3>Weekly Premium</h3>
+      <h1>₹299 / Week</h1>
+    </div>
+
+    <div class="card">
+      <h3>Coverage Status</h3>
+      <p class="active">✔ Active Protection</p>
+      <p>Till: May 10, 2026</p>
+    </div>
+
+    <div class="card">
+      <h3>Protected Earnings</h3>
+      <h1>₹8,000</h1>
+      <p>Income Safeguard in Case of Disruptions</p>
+    </div>
+  </div>
+
+  <!-- Main Panel -->
+  <div class="main">
+
+    <div class="alert">
+      <h3>🌧 Heavy Rain Detected</h3>
+      <p>Severe rainfall in your area. Deliveries at risk.</p>
+      <p class="active">✔ Automatic Coverage Activated</p>
+    </div>
+
+    <div class="bottom">
+
+      <div class="card">
+        <h3>Claims</h3>
+        <div class="claim-item">
+          <span>Curfew Lockdown</span>
+          <span class="paid">₹2,400</span>
+        </div>
+        <div class="claim-item">
+          <span>Flood Alert</span>
+          <span class="paid">₹3,000</span>
+        </div>
+        <button>File a Claim</button>
+      </div>
+
+      <div class="card analytics">
+        <h3>Analytics Overview</h3>
+        <p>Total Payouts: ₹12,400</p>
+        <p>Days Covered: 32</p>
+        <p>Alerts Triggered: 5</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>
